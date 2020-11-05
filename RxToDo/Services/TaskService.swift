@@ -68,11 +68,11 @@ struct TaskService: TaskServiceType {
   }
   
   func toggle(task: TaskItem) -> Observable<TaskItem> {
-    <#code#>
+    
   }
   
   func tasks() -> Observable<Results<TaskItem>> {
-    <#code#>
+    
   }
   
   

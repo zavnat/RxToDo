@@ -40,7 +40,7 @@
 		844390B82540276C002996C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844390BB2540276C002996C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844390BD2540276C002996C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		844390C62549A37B002996C9 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditViewController.swift; path = RxToDo/EditViewController.swift; sourceTree = SOURCE_ROOT; };
+		844390C62549A37B002996C9 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EditViewController.swift; path = RxToDo/Controllers/EditViewController.swift; sourceTree = SOURCE_ROOT; };
 		844390CA2549A707002996C9 /* TaskItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TaskItemTableViewCell.swift; path = RxToDo/Cell/TaskItemTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		844390DC2549BC10002996C9 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		844390EC2549BCA5002996C9 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				84439105254AD41B002996C9 /* SceneTransitiontype.swift */,
 				844390F22549C022002996C9 /* SceneCoordinatorType.swift */,
 			);
-			name = Scenes;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		844390FC254ACA0A002996C9 /* Model */ = {
