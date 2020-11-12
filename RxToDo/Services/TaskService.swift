@@ -8,6 +8,7 @@
 import Foundation
 import RealmSwift
 import RxSwift
+import RxRealm
 
 struct TaskService: TaskServiceType {
   
@@ -64,16 +65,36 @@ struct TaskService: TaskServiceType {
   }
   
   func update(task: TaskItem, title: String) -> Observable<TaskItem> {
-    
+    let result = withRealm("updating") { realm -> Observable<TaskItem> in
+      try realm.write {
+        task.title = title
+      }
+      return .just(task)
+    }
+    return result ?? .error(TaskServiceError.updateFailed)
   }
   
   func toggle(task: TaskItem) -> Observable<TaskItem> {
-    
+    let result = withRealm("toggling") { realm -> Observable<TaskItem> in
+      try realm.write {
+        if task.checked == nil {
+          task.checked = Date()
+        } else {
+          task.checked = nil
+        }
+      }
+      return .just(task)
+    }
+    return result ?? .error(TaskServiceError.toggleFailed)
   }
   
   func tasks() -> Observable<Results<TaskItem>> {
-    
+    let result = withRealm("getting task") { realm -> Observable<Results<TaskItem>> in
+      let realm = try Realm()
+      let tasks = realm.objects(TaskItem.self)
+      return Observable.collection(from: tasks)
+    }
+    return result ?? .empty()
   }
-  
   
 }

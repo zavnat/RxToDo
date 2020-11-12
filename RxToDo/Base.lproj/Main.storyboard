@@ -117,6 +117,11 @@
                         <barButtonItem key="leftBarButtonItem" title="OK" id="Dsy-r4-kiI"/>
                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="NZt-oB-Ar5"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="NZt-oB-Ar5" id="bli-3D-8Aw"/>
+                        <outlet property="okButton" destination="Dsy-r4-kiI" id="vCt-FM-D7k"/>
+                        <outlet property="titleView" destination="k9d-Z9-dve" id="wVC-X0-qg2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="60l-bz-9Z1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

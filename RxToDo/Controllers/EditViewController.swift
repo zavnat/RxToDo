@@ -9,13 +9,26 @@ import UIKit
 
 class EditViewController: UIViewController, BindableType {
   
+  @IBOutlet weak var okButton: UIBarButtonItem!
+  @IBOutlet weak var cancelButton: UIBarButtonItem!
+  @IBOutlet weak var titleView: UITextView!
+  
   var viewModel: EditTaskViewModel!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  func bindViewModel() {
+    titleView.text = viewModel.itemTitle
+    
+    cancelButton.rx.action = viewModel.onCancel
+    
+    okButton.rx.tap
+      .withLatestFrom(titleView.rx.text.orEmpty)
+      .bind(to: viewModel.onUpdate.inputs)
+      .disposed(by: self.rx.disposeBag)
   }
   
-  func bindViewModel() {
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    titleView.becomeFirstResponder()
   }
   
 }
