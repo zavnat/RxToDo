@@ -19,7 +19,7 @@ struct TasksViewModel {
   var sectionedItems: Observable<[TaskSection]> {
     return self.taskService.tasks()
       .map { results in
-        let dueTasks = results
+        let tasks = results
           .filter("checked == nil")
           .sorted(byKeyPath: "added", ascending: false)
         
@@ -28,8 +28,8 @@ struct TasksViewModel {
           .sorted(byKeyPath: "checked", ascending: false)
         
         return [
-          TaskSection(model: "Due Tasks", items: dueTasks.toArray()),
-          TaskSection(model: "Done Tasks", items: doneTasks.toArray())
+          TaskSection(model: "Задачи", items: tasks.toArray()),
+          TaskSection(model: "Выполненные", items: doneTasks.toArray())
         ]
       }
   }

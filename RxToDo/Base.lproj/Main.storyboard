@@ -42,19 +42,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfj-J9-KAL">
-                                                    <rect key="frame" x="20" y="11" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfj-J9-KAL">
+                                                    <rect key="frame" x="20" y="11.333333333333336" width="340" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A1-Uk-1IG">
-                                                    <rect key="frame" x="332" y="9" width="78" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5A1-Uk-1IG">
+                                                    <rect key="frame" x="370" y="9.3333333333333357" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="9x3-bT-4Si"/>
+                                                        <constraint firstAttribute="width" constant="25" id="aNH-Ru-kmy"/>
+                                                    </constraints>
                                                     <state key="normal" title="Button" image="ItemChecked"/>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5A1-Uk-1IG" firstAttribute="leading" secondItem="rfj-J9-KAL" secondAttribute="trailing" constant="10" id="2Na-5p-RDq"/>
+                                                <constraint firstItem="5A1-Uk-1IG" firstAttribute="centerY" secondItem="d3N-5N-I1v" secondAttribute="centerY" id="Qbe-hR-FP2"/>
+                                                <constraint firstItem="rfj-J9-KAL" firstAttribute="centerY" secondItem="d3N-5N-I1v" secondAttribute="centerY" id="Ys7-Fh-PQV"/>
+                                                <constraint firstItem="rfj-J9-KAL" firstAttribute="leading" secondItem="d3N-5N-I1v" secondAttribute="leading" constant="20" id="dKI-eB-Sfq"/>
+                                                <constraint firstAttribute="trailing" secondItem="5A1-Uk-1IG" secondAttribute="trailing" constant="19" id="lo8-K5-wPF"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="button" destination="5A1-Uk-1IG" id="edH-rT-Ez2"/>
@@ -135,7 +144,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o0W-6e-Zcg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.99997437000274658" blue="0.099395333904109595" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.90196078431372551" green="0.42352941176470588" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -154,7 +163,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GAh-at-gjA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="0.99997437" blue="0.099395333899999994" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.90196078431372551" green="0.42352941176470588" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
